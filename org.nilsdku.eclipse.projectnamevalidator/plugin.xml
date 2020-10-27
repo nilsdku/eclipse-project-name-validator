@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.nilsdku.eclipse.projectnamevalidator.startup"
+         name="Startup"
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.nilsdku.eclipse.projectnamevalidator.main.Startup">
+      </startup>
+   </extension>
+   <extension
+         id="org.nilsdku.eclipse.projectnamevalidator.propertyPage"
+         name="Property Page"
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="org.nilsdku.eclipse.projectnamevalidator.ui.RenameIgnoringPropertyPage"
+            id="org.nilsdku.eclipse.projectnamevalidator.renameIgnoringPropertyPage"
+            name="%property.page.project.rename">
+      </page>
+   </extension>
+
+</plugin>
