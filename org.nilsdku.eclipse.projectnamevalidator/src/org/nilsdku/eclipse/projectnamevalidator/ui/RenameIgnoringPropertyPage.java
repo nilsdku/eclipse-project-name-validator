@@ -3,12 +3,14 @@ package org.nilsdku.eclipse.projectnamevalidator.ui;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.ui.IWorkbenchPropertyPage;
 import org.eclipse.ui.dialogs.PropertyPage;
 import org.nilsdku.eclipse.projectnamevalidator.ChangedNameValidator;
+import org.nilsdku.eclipse.projectnamevalidator.Messages;
 import org.nilsdku.eclipse.projectnamevalidator.ProjectValidator;
 import org.nilsdku.eclipse.projectnamevalidator.log.ErrorStatusHandler;
 import org.nilsdku.eclipse.projectnamevalidator.property.RenameIgnoringProperty;
@@ -18,11 +20,7 @@ import org.nilsdku.eclipse.projectnamevalidator.property.RenameIgnoringProperty;
  * в рабочем пространстве.
  */
 public class RenameIgnoringPropertyPage extends PropertyPage implements IWorkbenchPropertyPage
-{
-	public static final String RENAME_IGNORING_MESSAGE = "Игнорировать приводящее к несовпадению имени проекта и " +
-														 "имени его папки в файловой системе переименование проекта " +
-														 "(не рекомендуется)";
-	
+{	
 	private Button m_renameIgnoringButton;
 	
 	private RenameIgnoringProperty m_property;
@@ -31,8 +29,13 @@ public class RenameIgnoringPropertyPage extends PropertyPage implements IWorkben
 	protected Control createContents(Composite a_parent)
 	{
 		m_property = new RenameIgnoringProperty((IProject)getElement());
-		m_renameIgnoringButton = new Button(a_parent, SWT.CHECK);
-		m_renameIgnoringButton.setText(RENAME_IGNORING_MESSAGE);
+		
+		m_renameIgnoringButton = new Button(a_parent, SWT.CHECK | SWT.WRAP);
+		GridData buttonData = new GridData(SWT.LEFT, SWT.UP, false, false);
+		buttonData.heightHint = 42;
+		m_renameIgnoringButton.setLayoutData(buttonData);
+		m_renameIgnoringButton.setText(Messages.Property_Page_Text_Ru.replaceAll("\n", System.lineSeparator()));
+		
 		try
 		{
 			m_renameIgnoringButton.setSelection(m_property.getValue());

@@ -13,6 +13,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.PlatformUI;
+import org.nilsdku.eclipse.projectnamevalidator.Messages;
 import org.nilsdku.eclipse.projectnamevalidator.log.ErrorStatusHandler;
 import org.nilsdku.eclipse.projectnamevalidator.property.RenameIgnoringProperty;
 
@@ -56,10 +57,7 @@ public class ProblemNameDialog extends Dialog
 		String projectName = "";
 		IPath location = a_project.getLocation();
 		if (location != null) projectName = location.lastSegment();
-		m_warningMessage = "Не рекомендуется переименовывать проект " + projectName + ", так как это приведёт к " +
-						   "ошибке (несовпадению имени проекта и имени его папки). Добавить данный проект в " +
-						   "исключения (данное действие или его отмену также можно совершить на странице " +
-						   System.lineSeparator() + "\"Свойства\"->\"Переименование проекта\")?";
+		m_warningMessage = Messages.Warning_Dialog_Message_Begin_Ru + projectName + Messages.Warning_Dialog_Message_End_Ru;
 	}
 	
 	@Override

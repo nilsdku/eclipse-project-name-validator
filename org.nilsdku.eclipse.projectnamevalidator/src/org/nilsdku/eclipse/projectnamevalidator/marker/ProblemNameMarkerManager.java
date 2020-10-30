@@ -6,6 +6,7 @@ import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
+import org.nilsdku.eclipse.projectnamevalidator.Messages;
 import org.nilsdku.eclipse.projectnamevalidator.ProjectValidator;
 
 /**
@@ -17,9 +18,6 @@ public class ProblemNameMarkerManager
 	public static final String MARKER_ATTRIBUTE_PROBLEM_NAME = "MARKER_ATTRIBUTE_PROBLEM_NAME";
 	
 	public static final String MARKER_ATTRIBUTE_VALUE_PROBLEM_NAME = "problemName";
-	
-	public static final String MARKER_ATTRIBUTE_VALUE_MESSAGE = "Имя проекта должно совпадать с именем его папки " +
-																"в файловой системе.";
 	
 	private IResource m_resource;
 	
@@ -54,7 +52,7 @@ public class ProblemNameMarkerManager
 		{
 			marker.setAttribute(IMarker.LOCATION, location.toString());
 		}
-		marker.setAttribute(IMarker.MESSAGE, MARKER_ATTRIBUTE_VALUE_MESSAGE);
+		marker.setAttribute(IMarker.MESSAGE, Messages.Marker_Attribute_Message_Value_Ru);
 		marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 		marker.setAttribute(IMarker.USER_EDITABLE, false);
 		return true;
