@@ -57,7 +57,7 @@ public class ProblemNameDialog extends Dialog
 		String projectName = "";
 		IPath location = a_project.getLocation();
 		if (location != null) projectName = location.lastSegment();
-		m_warningMessage = Messages.Warning_Dialog_Message_Begin_Ru + projectName + Messages.Warning_Dialog_Message_End_Ru;
+		m_warningMessage = String.format(Messages.Warning_Dialog_Message_Ru, projectName);
 	}
 	
 	@Override
@@ -69,7 +69,7 @@ public class ProblemNameDialog extends Dialog
 		
 		Label messageLabel = new Label(composite, SWT.WRAP);
 		messageLabel.setText(m_warningMessage);
-		GridData gridData = new GridData(GridData.FILL_HORIZONTAL) ;
+		GridData gridData = new GridData(SWT.FILL, SWT.CENTER, true, false);
 		gridData.widthHint = 500;
 		messageLabel.setLayoutData(gridData);
 		

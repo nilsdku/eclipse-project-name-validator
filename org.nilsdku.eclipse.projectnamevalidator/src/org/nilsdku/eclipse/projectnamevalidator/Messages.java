@@ -29,17 +29,13 @@ public class Messages extends NLS
 	
 	public static String Marker_Attribute_Message_Value_Ru;
 	
-	public static String Warning_Dialog_Message_Begin_Ru;
-	
-	public static String Warning_Dialog_Message_End_Ru;
+	public static String Warning_Dialog_Message_Ru;
 	
 	public static String Property_Page_Text_Ru;
 	
 	public static String Marker_Attribute_Message_Value_Eng;
 	
-	public static String Warning_Dialog_Message_Begin_Eng;
-	
-	public static String Warning_Dialog_Message_End_Eng;
+	public static String Warning_Dialog_Message_Eng;
 	
 	public static String Property_Page_Text_Eng;
 }
