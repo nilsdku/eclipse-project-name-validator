@@ -34,7 +34,7 @@ public class RenameIgnoringPropertyPage extends PropertyPage implements IWorkben
 		GridData buttonData = new GridData(SWT.LEFT, SWT.UP, false, false);
 		buttonData.heightHint = 42;
 		m_renameIgnoringButton.setLayoutData(buttonData);
-		m_renameIgnoringButton.setText(Messages.Property_Page_Text_Ru.replaceAll("\n", System.lineSeparator()));
+		m_renameIgnoringButton.setText(Messages.Property_Page_Text_Ru);
 		
 		try
 		{
