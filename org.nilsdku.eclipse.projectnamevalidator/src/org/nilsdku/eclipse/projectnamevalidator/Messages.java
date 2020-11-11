@@ -16,7 +16,8 @@ public class Messages extends NLS
 	
 	/**
 	 * Инициализирует сообщения, объявленные в данном классе.
-	 * Сообщения хранятся в файле messages.properties.
+	 * Сообщения хранятся в файлах messages.properties и 
+	 * messages_ru.properties.
 	 */
 	public static void reloadMessages ()
 	{
@@ -27,16 +28,10 @@ public class Messages extends NLS
 	
 	public static String Exception_Marker_Deletion;
 	
-	public static String Marker_Attribute_Message_Value_Ru;
+	public static String Marker_Attribute_Message_Value;
 	
-	public static String Warning_Dialog_Message_Ru;
+	public static String Warning_Dialog_Message;
 	
-	public static String Property_Page_Text_Ru;
-	
-	public static String Marker_Attribute_Message_Value_Eng;
-	
-	public static String Warning_Dialog_Message_Eng;
-	
-	public static String Property_Page_Text_Eng;
+	public static String Property_Page_Text;
 }
 

@@ -52,7 +52,7 @@ public class ProblemNameMarkerManager
 		{
 			marker.setAttribute(IMarker.LOCATION, location.toString());
 		}
-		marker.setAttribute(IMarker.MESSAGE, Messages.Marker_Attribute_Message_Value_Ru);
+		marker.setAttribute(IMarker.MESSAGE, Messages.Marker_Attribute_Message_Value);
 		marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 		marker.setAttribute(IMarker.USER_EDITABLE, false);
 		return true;

@@ -57,7 +57,7 @@ public class ProblemNameDialog extends Dialog
 		String projectName = "";
 		IPath location = a_project.getLocation();
 		if (location != null) projectName = location.lastSegment();
-		m_warningMessage = String.format(Messages.Warning_Dialog_Message_Ru, projectName);
+		m_warningMessage = String.format(Messages.Warning_Dialog_Message, projectName);
 	}
 	
 	@Override
